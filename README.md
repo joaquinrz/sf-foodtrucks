@@ -4,7 +4,7 @@ A prototype application written in TypeScript and React.js to easily visualize i
 
 ![](src/assets/screenshot.png)
 
-A live version of this application can be demoed [here](http://gotoemo.com).
+A live version of this application can be demoed [here](http://joaquinrdz.com).
 
 ## Technologies Used
 
@@ -39,7 +39,7 @@ The following instructions will get you up and running in your local environment
 Clone the repository
 
 ```shell
-git clone REPO && cd
+git clone https://github.com/joaquinrdz89/sf-foodtrucks.git && cd sf-foodtrucks
 ```
 
 Install the necessary dependencies
