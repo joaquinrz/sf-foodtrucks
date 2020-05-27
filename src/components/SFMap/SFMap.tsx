@@ -14,7 +14,10 @@ import { AuthenticationType, data, MapMouseEvent, PopupOptions, ControlOptions }
 import { getFoodTruckData } from '../../api/FoodTruckData';
 import { FTMarker } from '../../interfaces/ftmarker.interface';
 
-const renderPoint = (marker: FTMarker) => {
+/*
+ * Function that returns a Food Truck Marker with metadata to be Rendered
+ */
+const renderMarker = (marker: FTMarker) => {
     const rendId = Math.random();
     return (
         <AzureMapFeature
@@ -30,9 +33,12 @@ const renderPoint = (marker: FTMarker) => {
     );
 };
 
+/*
+ * The Azure Maps Component to be Rendered
+ */
 const SFMap: React.FC = () => {
-    const initMarker: Array<FTMarker> = [];
-    const [markers, setMarkers] = useState(initMarker);
+    const initMarkers: Array<FTMarker> = [];
+    const [markers, setMarkers] = useState(initMarkers);
     const [popupOptions, setPopupOptions] = useState<PopupOptions>({});
     const [popupProperties, setPopupProperties] = useState({ name: '', address: '' });
 
@@ -54,18 +60,20 @@ const SFMap: React.FC = () => {
         });
     }, []);
 
+    //Provides the initial state for the Map
     const option: IAzureMapOptions = useMemo(() => {
         return {
             authOptions: {
                 authType: AuthenticationType.subscriptionKey,
                 subscriptionKey: process.env.REACT_APP_AZURE_MAP_API_KEY,
             },
-            center: [-122.431297, 37.773972],
+            center: [-122.431297, 37.773972], //San Francisco Coordinates
             zoom: 13,
             view: 'Auto',
         };
     }, []);
 
+    //Enables The Map Control options such as Zoom
     const controls: [IAzureMapControls] = [
         {
             controlName: 'ZoomControl',
@@ -73,8 +81,9 @@ const SFMap: React.FC = () => {
         },
     ];
 
+    //Set all the Markers to be rendered
     const memoizedMarkerRender: IAzureDataSourceChildren = useMemo(
-        (): any => markers.map((marker) => renderPoint(marker)),
+        (): any => markers.map((marker) => renderMarker(marker)),
         [markers],
     );
 

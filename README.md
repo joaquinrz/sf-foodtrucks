@@ -4,7 +4,7 @@ A prototype application written in TypeScript and React.js to easily visualize i
 
 ![](src/assets/screenshot.png)
 
-A live version of this application can be demoed [here](http://joaquinrdz.com).
+A live demo of this application can be viewed [here](http://joaquinrdz.com).
 
 ## Technologies Used
 
@@ -14,9 +14,9 @@ A live version of this application can be demoed [here](http://joaquinrdz.com).
 -   [React-Azure-Maps](https://www.npmjs.com/package/react-azure-maps)
 -   NGINX
 -   Docker
--   SoQL for San Francisco Data API
+-   [SoQL for San Francisco Data API](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat)
 
-## One-line command to test the application locally without installing any requirements other than Docker
+## A one-line command to test the application locally without having to install any dependencies other than Docker
 
 ```shell
 docker run -p 8080:80 joaquinrodriguez/sf-foodtrucks:latest
@@ -36,35 +36,35 @@ The following instructions will get you up and running in your local environment
 
 ### Installing
 
-Clone the repository
+#### Clone the repository
 
 ```shell
 git clone https://github.com/joaquinrdz89/sf-foodtrucks.git && cd sf-foodtrucks
 ```
 
-Install the necessary dependencies
+#### Install the necessary package dependencies
 
 ```shell
 npm install
 ```
 
-Create an .env file to store Azure Maps API Key
+#### Create an .env file to store the Azure Maps API Key
 
 ```shell
 echo "REACT_APP_AZURE_MAP_API_KEY=<YOUR_KEY_GOES_HERE>" >> .env
 ```
 
-Run the application in development mode
+#### Run the application in development mode
 
 ```shell
 npm start
 ```
 
-The application will be ready to be seen at http://localhost:3000
+The application will now be ready to be seen at http://localhost:3000
 
 ## Creating a Production Build
 
-The following command will create an optimized production build in the `./build` folder
+#### The following command will create an optimized production build in the `./build` folder
 
 ```shell
 npm run build
@@ -76,16 +76,17 @@ npm run build
 docker build --build-arg REACT_APP_AZURE_MAP_API_KEY=<YOUR_KEY_GOES_HERE> . -t <repo_name>/<image_name>
 ```
 
-## Future Enhancements
+## Future Enhancements and Ideas
 
--   Add Search Functionality
--   Integrate with Yelp API to provide more information about the food truck (telephone, hours, etc)
+-   Add search functionality
+-   Integrate geolocation services to view user's current position
+-   Integrate with Yelp API to provide more information about the food trucks (rating, telephone, hours of operation, etc)
 -   Filter results
--   Have a local datastore (e.g. MongoDB, Elasticsearch) to store the food trucks without having to rely on the SF API and to improve performance
+-   Have a datastore available (e.g. MongoDB, Elasticsearch) to store the food trucks data without having to rely on the San Francisco API in case it comes down and also to improve performance
 
 ## Other Notes
 
-Coming from a backend development background, this application was an innovative way to come up to speed with some of the features that React.js has to offer.
+Coming from a backend development background, this application was an excellent and innovative way to be even more familiarized with some of the React.js capabilities as well as the Azure Cloud Services Catalog.
 
 ## Authors
 

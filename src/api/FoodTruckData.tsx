@@ -1,5 +1,9 @@
 import axios from 'axios';
 
+/**
+ * @desc Function that makes a REST API call to the San Francisco Database of Approved Food Trucks
+ * @return a response containing the data or throws an error on failure
+ */
 export const getFoodTruckData = () => {
     return axios
         .get(
