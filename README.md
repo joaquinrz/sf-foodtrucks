@@ -4,7 +4,6 @@ A prototype application written in TypeScript and React.js to easily visualize i
 
 ![](src/assets/screenshot.png)
 
-A live demo of this application can be viewed [here](http://joaquinrdz.com).
 
 ## Technologies Used
 
@@ -15,14 +14,6 @@ A live demo of this application can be viewed [here](http://joaquinrdz.com).
 -   NGINX
 -   Docker
 -   [SoQL for San Francisco Data API](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat)
-
-## A one-line command to test the application locally without having to install any dependencies other than Docker
-
-```shell
-docker run -p 8080:80 joaquinrodriguez/sf-foodtrucks:latest
-```
-
-The application will be ready to be seen at http://localhost:8080
 
 ## Getting Started
 
