@@ -30,7 +30,7 @@ The following instructions will get you up and running in your local environment
 #### Clone the repository
 
 ```shell
-git clone https://github.com/joaquinrdz89/sf-foodtrucks.git && cd sf-foodtrucks
+git clone https://github.com/joaquinrz/sf-foodtrucks.git && cd sf-foodtrucks
 ```
 
 #### Install the necessary package dependencies
