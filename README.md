@@ -81,7 +81,7 @@ Coming from a backend development background, this application was an excellent 
 
 ## Authors
 
--   **Joaquin Rodriguez** - _Initial work_ - [joaquinrdz89](https://github.com/joaquinrdz89)
+-   **Joaquin Rodriguez** - _Initial work_ - [joaquinrz](https://github.com/joaquinrz)
 
 ## Attributions
 
